@@ -11,6 +11,10 @@ jobs:
           command: |
             docker build -t eyenx/octodns . 
       - run:
+          name: Test Image
+          command: |
+            docker run eyenx/octodns octodns-sync --help
+      - run:
           name: Push Image
           command: |
             echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/octodns:$CIRCLE_SHA1 && docker tag eyenx/octodns:$CIRCLE_SHA1 eyenx/octodns:latest && docker push eyenx/octodns:latest
