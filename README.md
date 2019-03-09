@@ -1,4 +1,5 @@
 # docker-octodns
+[![Circle CI](https://circleci.com/gh/eyenx/docker-octodns.svg?style=svg)](https://circleci.com/gh/eyenx/docker-octodns)
 octodns in a docker container
 
 Installed with all requirements
