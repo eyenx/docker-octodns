@@ -11,9 +11,17 @@ cd octodns-master && \
 pip install -r requirements.txt && \
 python setup.py install && cd /app && rm -rf octodns-master
 
+
 FROM python:2-alpine
+
+LABEL maintainer="eye@eyenx.ch"
+
 RUN apk --no-cache add ca-certificates
+
 WORKDIR /app/
+
 COPY --from=builder /app .
+
 ENV PATH=/app/bin:$PATH
+
 CMD ["octodns-sync"]
