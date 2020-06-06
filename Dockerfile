@@ -25,6 +25,6 @@ LABEL	maintainer="eye@eyenx.ch"
 RUN	apk add --no-cache \
 	ca-certificates
 WORKDIR	/app/
-COPY	/app	.
+COPY --from=builder	/app	.
 ENV	PATH	/app/bin:$PATH
 CMD	["octodns-sync"]
