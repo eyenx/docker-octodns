@@ -1,5 +1,5 @@
 	
-FROM	python:2-alpine	as	builder
+FROM	python:3-alpine	as	builder
 LABEL	maintainer="eye@eyenx.ch"
 RUN	apk add --no-cache \
 	--update \
@@ -20,7 +20,7 @@ RUN	apk add --no-cache \
 	&& python setup.py install \
 	&& cd /app \
 	&& rm -rf octodns-master
-FROM	python:2-alpine
+FROM	python:3-alpine
 LABEL	maintainer="eye@eyenx.ch"
 RUN	apk add --no-cache \
 	ca-certificates
