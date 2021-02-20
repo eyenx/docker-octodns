@@ -4,6 +4,7 @@ LABEL	maintainer="eye@eyenx.ch"
 RUN	apk add --no-cache \
 	--update \
 	gcc \
+    cargo \
 	musl-dev \
 	libffi-dev \
 	openssl-dev \
