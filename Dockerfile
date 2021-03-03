@@ -1,6 +1,6 @@
 	
 FROM	python:3-alpine	as	builder
-LABEL   org.opencontainers.image.source="Toni Tauro <eye@eyenx.ch>"	
+LABEL   org.opencontainers.image.authors="Toni Tauro <eye@eyenx.ch>"	
 RUN	apk add --no-cache \
 	--update \
 	gcc \
